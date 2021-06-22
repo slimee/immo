@@ -11,7 +11,7 @@ module.exports = ({ assertPresent, fetchSearchParameters, immoCollection }) => {
     if(searchParameters.surfaceTerrain.max) filter.surface_terrain = { $lte: searchParameters.surface_terrain.max,...filter.surface_terrain};
 
     return immoCollection()
-      .find(filter)
+      .find(filter, { date_mutation:1, valeur_fonciere: 1, code_postal: 1, adresse_numero: 1, adresse_nom_voie: 1, nom_commune: 1, surface_terrain: 1 })
       .limit(30)
       .toArray();
   }

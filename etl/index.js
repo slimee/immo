@@ -56,11 +56,11 @@ function get(key, raw){
 }
 
 dbConnect()
-  .then(processLineByLine('full.2014.csv'))
-  .then(processLineByLine('full.2015.csv'))
-  .then(processLineByLine('full.2016.csv'))
-  .then(processLineByLine('full.2017.csv'))
-  .then(processLineByLine('full.2018.csv'))
-  .then(processLineByLine('full.2019.csv'))
-  .then(processLineByLine('full.2020.csv'))
+  .then(processLineByLine('data/full.2014.csv'))
+  // .then(processLineByLine('full.2015.csv'))
+  // .then(processLineByLine('full.2016.csv'))
+  // .then(processLineByLine('full.2017.csv'))
+  // .then(processLineByLine('full.2018.csv'))
+  // .then(processLineByLine('full.2019.csv'))
+  // .then(processLineByLine('full.2020.csv'))
   .catch(e => debug(e))

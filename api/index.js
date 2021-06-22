@@ -3,7 +3,7 @@ const env = require('./env');
 const web = require('./web');
 const database = require('./database');
 const business = require('./business');
-const webAdapters = require('./web-adapters')
+const httpToBusinessAdapter = require('./http-to-business-adapter')
 const start = require('./start');
 
 const myImmoApp = execute([
@@ -11,7 +11,7 @@ const myImmoApp = execute([
   web,
   database,
   business,
-  webAdapters,
+  httpToBusinessAdapter,
   start,
 ]);
 
