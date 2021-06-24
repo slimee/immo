@@ -2,10 +2,10 @@ const { MongoClient } = require('mongodb')
 const debug = require('debug')('api:mongo')
 
 class Mongo {
-  constructor({ assertPresent, env }){
-    assertPresent({ env });
-    this.dbConnectionString = env.DB_CONNECTION_STRING;
-    this.dbName = env.DB_NAME;
+  constructor({ assertPresent, dbConnectionString, dbName }){
+    assertPresent({ dbConnectionString, dbName });
+    this.dbConnectionString = dbConnectionString;
+    this.dbName = dbName;
     this.database = null;
   }
   connect(){

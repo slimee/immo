@@ -1,18 +1,26 @@
-const { execute } = require('@forestadmin/context');
+const fetch = require('node-fetch');
+const { execute, makeWriteFilesystem } = require('@forestadmin/context');
 const env = require('./env');
-const web = require('./web');
+const http = require('./http');
 const database = require('./database');
 const business = require('./business');
-const httpToBusinessAdapter = require('./http-to-business-adapter')
+const httpToBusiness = require('./http-to-business')
 const start = require('./start');
 
 const myImmoApp = execute([
   env,
-  web,
+  http,
   database,
   business,
-  httpToBusinessAdapter,
+  httpToBusiness,
   start,
+  (plan) => plan.addMetadataHook(makeWriteFilesystem(__dirname, 'generated')),
 ]);
 
-myImmoApp.start();
+myImmoApp
+  .start()
+  .then(async () => {
+    await fetch(`http://localhost:${myImmoApp.getHTTPPort()}/api/search`)
+      .then(response => response.json())
+      .then(data => console.log(data));
+  });

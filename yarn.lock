@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@forestadmin/context@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@forestadmin/context/-/context-1.6.0.tgz#fa0c0566ceebdb6d54358beb8ce11c94c255c06e"
-  integrity sha512-tvsT1T38PSU9bPVGFEHwUgCcgRf0CFP6dN0CwAN0RjYGh/7BxYoTC6Y2u+dPvpP7PQBWADGKJGBhtWxWSn1Tcw==
+"@forestadmin/context@1.13.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@forestadmin/context/-/context-1.13.0.tgz#b25bbd7c5489849e861395d39a4d6d93fb4b0a29"
+  integrity sha512-1hkrAjMZDpI0Wv7i11V3y2+Vjyi8N2uHtYmtXwqifbBmvs1d1CD6QXxhSEfnOstPnU9HS9psIjcWkNfcGh/bjg==
 
 accepts@~1.3.7:
   version "1.3.7"
@@ -312,6 +312,11 @@ negotiator@0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
+
+node-fetch@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 on-finished@~2.3.0:
   version "2.3.0"
